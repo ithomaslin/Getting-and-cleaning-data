@@ -33,7 +33,7 @@ testSubject <- read.table("UCI HAR Dataset/test/subject_test.txt")
 test <- cbind(testSubject, testActivities, test)
 
 allData <- rbind(train, test)
-colnames(allData) <- c("subject", "activity", featuresWanted.names)
+colnames(allData) <- c("subject", "activity", featuresRequired.names)
 
 allData$activity <- factor(allData$activity, levels = activityLabels[,1], labels = activityLabels[,2])
 allData$subject <- as.factor(allData$subject)
